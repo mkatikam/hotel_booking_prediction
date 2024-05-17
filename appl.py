@@ -5,28 +5,28 @@ import numpy as np
 import dill
 
 
-st.write('Hotel Booking Prediction')
+#st.write('Hotel Booking Prediction')
 
 # with open('rfr_v1.pkl', 'rb') as f:
 #     reloaded_model = dill.load(f)
 
-def get_model():
-    import gdown
-    url = 'https://drive.google.com/file/d/1Pvm-XaVQN46XkTYk4cqY7_VZXEkdyCQv/view?usp=sharing'
-    output = 'downloaded_rfr_v1.pkl'
-    gdown.download(url, output, quiet=False, fuzzy=True)
-    with open('downloaded_rfr_v1.pkl', 'rb') as f:
-        reloaded_model = dill.load(f)
+# def get_model():
+#     import gdown
+#     url = 'https://drive.google.com/file/d/1Pvm-XaVQN46XkTYk4cqY7_VZXEkdyCQv/view?usp=sharing'
+#     output = 'downloaded_rfr_v1.pkl'
+#     gdown.download(url, output, quiet=False, fuzzy=True)
+#     with open('downloaded_rfr_v1.pkl', 'rb') as f:
+#         reloaded_model = dill.load(f)
 
-    return reloaded_model
+#     return reloaded_model
 
 
-reloaded_model = get_model()
+# reloaded_model = get_model()
 
-with open('rfr_v1_info.json') as f:
-    model_info = json.load(f)
+# with open('rfr_v1_info.json') as f:
+#     model_info = json.load(f)
 
-st.title('Median House Value Prediction')
+st.title('Hotel Booking Prediction')
 
 with open('input.json') as f:
     model_info = json.load(f)
